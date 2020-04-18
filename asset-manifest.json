@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/grocerline/static/css/main.68b374ee.chunk.css",
-    "main.js": "/grocerline/static/js/main.7ed9451d.chunk.js",
-    "main.js.map": "/grocerline/static/js/main.7ed9451d.chunk.js.map",
-    "runtime-main.js": "/grocerline/static/js/runtime-main.24e90108.js",
-    "runtime-main.js.map": "/grocerline/static/js/runtime-main.24e90108.js.map",
-    "static/css/2.69121389.chunk.css": "/grocerline/static/css/2.69121389.chunk.css",
-    "static/js/2.af52cc1e.chunk.js": "/grocerline/static/js/2.af52cc1e.chunk.js",
-    "static/js/2.af52cc1e.chunk.js.map": "/grocerline/static/js/2.af52cc1e.chunk.js.map",
-    "index.html": "/grocerline/index.html",
-    "precache-manifest.0b4d9dd0f2080096de0af9e9cd0f9b98.js": "/grocerline/precache-manifest.0b4d9dd0f2080096de0af9e9cd0f9b98.js",
-    "service-worker.js": "/grocerline/service-worker.js",
-    "static/css/2.69121389.chunk.css.map": "/grocerline/static/css/2.69121389.chunk.css.map",
-    "static/css/main.68b374ee.chunk.css.map": "/grocerline/static/css/main.68b374ee.chunk.css.map",
-    "static/js/2.af52cc1e.chunk.js.LICENSE.txt": "/grocerline/static/js/2.af52cc1e.chunk.js.LICENSE.txt"
+    "main.css": "/covid-grocery-frontend/static/css/main.68b374ee.chunk.css",
+    "main.js": "/covid-grocery-frontend/static/js/main.2a5d927a.chunk.js",
+    "main.js.map": "/covid-grocery-frontend/static/js/main.2a5d927a.chunk.js.map",
+    "runtime-main.js": "/covid-grocery-frontend/static/js/runtime-main.87e356c2.js",
+    "runtime-main.js.map": "/covid-grocery-frontend/static/js/runtime-main.87e356c2.js.map",
+    "static/css/2.69121389.chunk.css": "/covid-grocery-frontend/static/css/2.69121389.chunk.css",
+    "static/js/2.7d7a0be4.chunk.js": "/covid-grocery-frontend/static/js/2.7d7a0be4.chunk.js",
+    "static/js/2.7d7a0be4.chunk.js.map": "/covid-grocery-frontend/static/js/2.7d7a0be4.chunk.js.map",
+    "index.html": "/covid-grocery-frontend/index.html",
+    "precache-manifest.f02e8be0823e6d88de62c964fcc9ee91.js": "/covid-grocery-frontend/precache-manifest.f02e8be0823e6d88de62c964fcc9ee91.js",
+    "service-worker.js": "/covid-grocery-frontend/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/covid-grocery-frontend/static/css/2.69121389.chunk.css.map",
+    "static/css/main.68b374ee.chunk.css.map": "/covid-grocery-frontend/static/css/main.68b374ee.chunk.css.map",
+    "static/js/2.7d7a0be4.chunk.js.LICENSE.txt": "/covid-grocery-frontend/static/js/2.7d7a0be4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.24e90108.js",
+    "static/js/runtime-main.87e356c2.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.af52cc1e.chunk.js",
+    "static/js/2.7d7a0be4.chunk.js",
     "static/css/main.68b374ee.chunk.css",
-    "static/js/main.7ed9451d.chunk.js"
+    "static/js/main.2a5d927a.chunk.js"
   ]
 }
