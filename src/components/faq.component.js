@@ -4,6 +4,7 @@ export default class Faq extends Component {
     render() {
         return (
             <div className="container" style={{paddingTop:'5%', textAlign: 'left'}}>
+                <hr/>
                 <h2 style={{ fontSize: '250%'}}>faq</h2>
 
                 <h4 style={{ fontSize: '150%'}}>how does this whole thing work?</h4>
@@ -31,9 +32,15 @@ export default class Faq extends Component {
                     You can help a lot by just submitting the "busy" level of the grocery store you are 
                     visiting or have visited on the store's page. You can also change the "senior hours" 
                     information if it is incorrect on the store's page. Aside from that, hosting all of this 
-                    costs money so it would be nice if you could donate <a href="https://www.buymeacoffee.com/NUxSuRm">here</a>. All the proceeds will be going 
+                    costs money so it would be nice if you could donate <a target="_blank" href="https://www.buymeacoffee.com/NUxSuRm">here</a>. All the proceeds will be going 
                     to maintaining this website and any leftover money will be donated to help people in this crisis.
                 </p><br/>
+
+                <h4 style={{ fontSize: '150%'}}>creator</h4>
+                <p>
+                    <a href="sid-hant.github.io">sidhant vashist</a> 
+                </p><br/>
+
 
 
             </div>

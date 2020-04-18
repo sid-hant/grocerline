@@ -13,9 +13,16 @@ export default class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Link style={{color: 'black'}} to="/" className="nav-link"><h1 style={{ fontSize: '600%', paddingTop: '5%', paddingBottom: '5%'}}>grocerline</h1></Link>
+          <div class="alert alert-dark" role="alert">
+          🚨 Don't forget to submit the crowd level for the store you are visting. Also, please donate if you can <a target="_blank" href="https://www.buymeacoffee.com/NUxSuRm">here</a> to help keep this website up. 🚨
+          </div>
+          <div className="container">
+            <Link style={{color: 'black'}} to="/" className="nav-link"><h1 style={{ fontSize: '9vw', paddingTop: '5%', paddingBottom: '5%'}}>grocerline</h1></Link>
+          </div>
+          
           
           <Search/>
+          
           <Faq/>
 
           <Route/>
