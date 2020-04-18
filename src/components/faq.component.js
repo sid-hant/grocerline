@@ -38,7 +38,7 @@ export default class Faq extends Component {
 
                 <h4 style={{ fontSize: '150%'}}>creator</h4>
                 <p>
-                    <a href="sid-hant.github.io">sidhant vashist</a> 
+                    <a target="_blank" href="http://sid-hant.github.io">sidhant vashist</a> 
                 </p><br/>
 
 
