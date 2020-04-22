@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2ac07e0ae5ad1b6be61594ff28d7cfc9",
+    "revision": "908b54e60e26f81e775ccb797895c856",
     "url": "/grocerline/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grocerline/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "a51550f0e78402d0768a",
+    "revision": "0f29cebcd339095ed5c8",
     "url": "/grocerline/static/css/main.68b374ee.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grocerline/static/js/2.6f7dbbe4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a51550f0e78402d0768a",
-    "url": "/grocerline/static/js/main.dcfd2597.chunk.js"
+    "revision": "0f29cebcd339095ed5c8",
+    "url": "/grocerline/static/js/main.44053109.chunk.js"
   },
   {
     "revision": "f38eecdd13e6c1acdf28",
