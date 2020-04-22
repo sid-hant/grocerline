@@ -15,12 +15,10 @@ export default function Chart(crowdData) {
     // return in JSX
     return (
 
-        // Main container
         <div className="table-responsive container">
 
             {/* Bar component from the libray */}
             <Bar 
-                // Labels and data for the graph
                 data={{
                     labels: ['12 AM','','','3 AM','','','6 AM','','','9 AM','','','12 PM','','','3 PM','','','6 PM','','','9 PM','',''],
                     datasets: [
@@ -35,7 +33,7 @@ export default function Chart(crowdData) {
                         }
                     ]
                 }}
-                // options for showing the yAxes label, legend and gridlines 
+                
                 options={
                     {   
                         maintainAspectRatio: false,

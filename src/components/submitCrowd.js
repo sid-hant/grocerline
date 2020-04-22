@@ -33,7 +33,6 @@ export default function SubmitCrowd(placeId) {
 
     // return JSX
     return (
-        // Show the form for submission and if submitted then show a thank you message
         <>
             {
                 dataSubmitted

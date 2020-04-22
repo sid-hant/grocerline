@@ -16,7 +16,6 @@ export default function StoreDetail(placeId) {
 
     // return JSX
     return (
-        // Main container
         <div className="container" style={{paddingBottom: '5%'}}>
 
             {/* If there is no place id show blank otherwise show the card */}

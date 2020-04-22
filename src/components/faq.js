@@ -6,8 +6,6 @@ export default function Faq() {
 
     // return the JSX code
     return (
-
-        // Main container for FAQ section
         <div className="container" style={{paddingTop:'5%', textAlign: 'left'}}>
             
             <hr/>

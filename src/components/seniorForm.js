@@ -179,19 +179,3 @@ export default function SeniorForm(placeId) {
         </>
     )
 }
-
-{/* <form onSubmit={this.submitSeniorHoursInfo}><br/>
-<p><b>Does This Store Have Dedicated Senior Hours?</b></p>
-<select className="form-control" onChange={this.seniorFormExistsChangeHandle}>
-    <option value="0">No</option>
-    <option value="1">Yes</option>
-</select>
-{this.state.formSeniorHoursExist
-
-    ?<div className="container"><br/><p><b>Does This Store Have Dedicated Senior Hours?</b></p>{Object.keys(this.state.formSeniorHours).map((key, index) => <div key={index}><b>{key.charAt(0).toUpperCase()+key.slice(1)}</b><br/>Open<select className="form-control" onChange={this.handleChangeForSeniorHoursForm} name={key+'_open'}>{this.state.formSeniorHourOptions.map((item) => <option key={item.value} value={item.value}>{item.name}</option>)}</select>Close<select className="form-control" onChange={this.handleChangeForSeniorHoursForm} name={key+'_close'}>{this.state.formSeniorHourOptions.map((item) => <option key={item.value} value={item.value}>{item.name}</option>)}</select></div>)}</div>
-
-    :<span></span>
-
-}
-<br/><div className="container"><button className="btn btn-outline-secondary" type="submit">Submit</button></div>
-</form>  */}
