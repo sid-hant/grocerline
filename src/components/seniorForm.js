@@ -1,9 +1,7 @@
-// import dependencies
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 export default function SeniorForm(placeId) {
-    // state
     const [id, setId] = useState(placeId.placeId);
     const [toggle, setToggle] = useState(false);
     const [seniorHoursExists, setSeniorHoursExists] = useState(false);
@@ -16,7 +14,6 @@ export default function SeniorForm(placeId) {
     });
 
 
-    //set the select option for the time
     const selectTimes = (
         <>
         <option value="0000">12 AM</option>
@@ -46,26 +43,22 @@ export default function SeniorForm(placeId) {
         </>
     );
 
-    // When component loads
     useEffect(() => {
         // set id
         setId(placeId.placeId);
     });
-    // whenever the placeId changes
     useEffect(() => {
         setToggle(false);
         setSeniorHoursExists(false);
         setDataSubmitted(false);
     }, [id]);
 
-    // ON SUBMIT FUNCTIONS
-    // show the main senior hour form
+
     const showSeniorForm = (e) => {
         e.preventDefault();
         setToggle(!toggle);
         if (seniorHoursExists === true) setSeniorHoursExists(false);
     };
-    // Submitting the senior hour form
     const updateSeniorHours = (e) => {
         e.preventDefault();
         const payload = {exists: seniorHoursExists, hours: hours.hours}
@@ -73,23 +66,16 @@ export default function SeniorForm(placeId) {
             .then(() => setDataSubmitted(true));
     };
 
-    // ON CHANGE FUNCTIONS
-    // changing the hours in senior form
+
     const changeSeniorHoursTime = (e) => {
 
-        // set the name of the select
         const name = e.target.name;
-        // split the name so we can get the path
         const nameSplit = name.split('_');
-        // get the current hours
         var tempHours = hours.hours;
-        // set the updated hours into the temp dictionary
         tempHours[nameSplit[0]][nameSplit[1]] = e.target.value;
-        // finally set the hours
         setHours({hours: tempHours});
     };
 
-    // Return JSX
     return (
         <>
         {

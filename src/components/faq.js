@@ -1,10 +1,7 @@
-// import dependencies
 import React from 'react';
 
-// export FAQ function
 export default function Faq() {
 
-    // return the JSX code
     return (
         <div className="container" style={{paddingTop:'5%', textAlign: 'left'}}>
             

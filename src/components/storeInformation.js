@@ -1,4 +1,3 @@
-// import dependencies
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import CurrentCrowd from './currentCrowd';
@@ -8,14 +7,11 @@ import SeniorForm from './seniorForm';
 
 
 export default function StoreInformation(placeId) {
-    // set state
     const [id, setId] = useState(placeId.placeId);
     const [storeInfo, setStoreInfo] = useState({});
     const [historicDay, setHistoricDay] = useState(0);
 
 
-    // Utitlities functions
-    // format military time to 
     const getFormattedTime = function (fourDigitTime){
         var hours24 = parseInt(fourDigitTime.substring(0,2));
         var hours = ((hours24 + 11) % 12) + 1;
@@ -24,18 +20,12 @@ export default function StoreInformation(placeId) {
         return hours + ':' + minutes + amPm;
     };
 
-    // USE EFFECTS
-    // useEffect when the component load, set the placeId
     useEffect(() => {
-        // Set id to the current place id
         setId(placeId.placeId);
     })
 
-    // loads when the placeId changes
     useEffect(() => {        
-        // if id is not empty
         if (id !== null ){
-            // Make get request to get the 
             axios.get(`https://covid-grocery-api.herokuapp.com/api/v1/store/${id}`)
             .then(response => {
                 const data = response.data;
@@ -46,7 +36,6 @@ export default function StoreInformation(placeId) {
         }
     }, [id]);
 
-    // Render JSX
     return (
         <>
         <h2><b>{storeInfo.name ? storeInfo.name : ''}</b></h2>

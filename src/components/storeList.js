@@ -1,20 +1,13 @@
-// import dependicies
 import React, { useState } from 'react';
 import { Link, Element } from 'react-scroll';
 
-// import components
 import StoreDetail from './storeDetail';
-// import BusyChart from './busyChart.component';
 
 
-// StoreList function "component"
 export default function StoreList(stores) {
-    // setting state
     const [placeId, setPlaceId] = useState(null);
 
-    // Create storeList which is multiple divs of store information
     const storeList = stores.stores.map(store => {
-        // Return the JSX
         return (
             <Link key={store.place_id} activeClass="active"  to="storeDetailElement" spy={true} smooth={true} duration={500}>
             <div key={store.place_id} name={store.place_id} onClick={e=> setPlaceId(e.target.getAttribute('name'))} className="container">
@@ -35,7 +28,6 @@ export default function StoreList(stores) {
         );
     });
 
-    // Return JSX
     return (
         <div className="row flex-column-reverse flex-md-row">
             <div className="col-lg-4 col-lg-pull-8">

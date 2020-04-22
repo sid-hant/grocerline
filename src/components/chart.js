@@ -1,18 +1,14 @@
-// Import dependencies
 import React, { useState, useEffect } from 'react'
 import { Bar } from 'react-chartjs-2';
 
 
 export default function Chart(crowdData) {
-    // state for the crowdLevel data
     const [chartData, setChartData] = useState(crowdData.crowdData);
 
-    // when component loads reset the crowd data
     useEffect(()=>{
         setChartData(crowdData.crowdData);
     });
 
-    // return in JSX
     return (
 
         <div className="table-responsive container">

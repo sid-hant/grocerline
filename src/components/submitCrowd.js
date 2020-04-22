@@ -1,37 +1,27 @@
-// import dependencies
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
 
 export default function SubmitCrowd(placeId) {
-    // states
     const [id, setId] = useState(placeId.placeId);
     const [crowdLevel, setCrowdLevel] = useState(0);
     const [dataSubmitted, setDataSubmitted] = useState(false);
 
-    // when the component loads
     useEffect(()=>{
-        // set place id
         setId(placeId.placeId);
     });
 
-    // set the dataSubmitted to false once the placeId changes
     useEffect(()=>{
-        // set data submitted to false
         setDataSubmitted(false);
     }, [id]);
 
-    // Functions
-    // When the user submits the crowd level
     const submitCrowdLevel = (e) => {
         e.preventDefault();
-        // do a post request and set the data submitted to true
         axios.post(`https://covid-grocery-api.herokuapp.com/api/v1/store/${id}/line-status`, {busy: crowdLevel})
             .then(() => setDataSubmitted(true));
         
     }
 
-    // return JSX
     return (
         <>
             {
