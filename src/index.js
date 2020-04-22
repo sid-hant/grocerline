@@ -7,7 +7,10 @@ import App from './App';
 
 // Render the application
 ReactDOM.render(
-    <App />,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+    ,
   document.getElementById('root')
 );
 
