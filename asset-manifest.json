@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/grocerline/static/css/main.68b374ee.chunk.css",
-    "main.js": "/grocerline/static/js/main.e2148eec.chunk.js",
-    "main.js.map": "/grocerline/static/js/main.e2148eec.chunk.js.map",
+    "main.js": "/grocerline/static/js/main.852df4af.chunk.js",
+    "main.js.map": "/grocerline/static/js/main.852df4af.chunk.js.map",
     "runtime-main.js": "/grocerline/static/js/runtime-main.af596296.js",
     "runtime-main.js.map": "/grocerline/static/js/runtime-main.af596296.js.map",
     "static/css/2.69121389.chunk.css": "/grocerline/static/css/2.69121389.chunk.css",
     "static/js/2.6f7dbbe4.chunk.js": "/grocerline/static/js/2.6f7dbbe4.chunk.js",
     "static/js/2.6f7dbbe4.chunk.js.map": "/grocerline/static/js/2.6f7dbbe4.chunk.js.map",
     "index.html": "/grocerline/index.html",
-    "precache-manifest.e937da58ee6492684f70a671d57e261f.js": "/grocerline/precache-manifest.e937da58ee6492684f70a671d57e261f.js",
+    "precache-manifest.f909f10f01580492a719ec4c5dd09ad6.js": "/grocerline/precache-manifest.f909f10f01580492a719ec4c5dd09ad6.js",
     "service-worker.js": "/grocerline/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/grocerline/static/css/2.69121389.chunk.css.map",
     "static/css/main.68b374ee.chunk.css.map": "/grocerline/static/css/main.68b374ee.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.69121389.chunk.css",
     "static/js/2.6f7dbbe4.chunk.js",
     "static/css/main.68b374ee.chunk.css",
-    "static/js/main.e2148eec.chunk.js"
+    "static/js/main.852df4af.chunk.js"
   ]
 }
