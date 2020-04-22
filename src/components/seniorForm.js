@@ -98,10 +98,8 @@ export default function SeniorForm(placeId) {
             ? <>Thank you for contributing</>
 
             :<>
-            {/* To toggle the Senior form */}
             <form onSubmit={showSeniorForm}><button className="btn btn-outline-secondary" type="submit">Submit Senior Hours Data</button></form>
 
-            {/* If the senior form is toggled on */}
             {
                 toggle
 

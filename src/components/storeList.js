@@ -16,11 +16,8 @@ export default function StoreList(stores) {
     const storeList = stores.stores.map(store => {
         // Return the JSX
         return (
-            // Link to scroll to the detailed part
             <Link key={store.place_id} activeClass="active"  to="storeDetailElement" spy={true} smooth={true} duration={500}>
-            {/* Main div to hold the store information */}
             <div key={store.place_id} name={store.place_id} onClick={e=> setPlaceId(e.target.getAttribute('name'))} className="container">
-                {/* Card, holds the name of the business, the address and if the store is open right now or not  */}
                 <div name={store.place_id} className="card mb-3" style={{borderWidth: '0.6px', borderRadius: '20px'}}>
                     <div name={store.place_id} className="card-body" style={{textAlign: 'left'}}>
                         <b name={store.place_id} style={{fontSize: '4vw%'}}>{ store.name }</b> <br/>
@@ -42,11 +39,9 @@ export default function StoreList(stores) {
     return (
         <div className="row flex-column-reverse flex-md-row">
             <div className="col-lg-4 col-lg-pull-8">
-                {/* List of stores  */}
                 {storeList}
             </div>
             <div className="col-lg-8 col-lg-push-4"><Element name="storeDetailElement"></Element>
-                {/* Place detail */}
                 <StoreDetail placeId = {placeId} />
             </div>
             

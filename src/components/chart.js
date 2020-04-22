@@ -17,7 +17,6 @@ export default function Chart(crowdData) {
 
         <div className="table-responsive container">
 
-            {/* Bar component from the libray */}
             <Bar 
                 data={{
                     labels: ['12 AM','','','3 AM','','','6 AM','','','9 AM','','','12 PM','','','3 PM','','','6 PM','','','9 PM','',''],

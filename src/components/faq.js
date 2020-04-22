@@ -10,10 +10,8 @@ export default function Faq() {
             
             <hr/>
 
-            {/* Header of the FAQ section */}
             <h2 style={{ fontSize: '250%'}}>faq</h2>
 
-            {/* Question in a header, answer in paragraph and then a break */}
             <h4 style={{ fontSize: '150%'}}>how does this whole thing work?</h4>
             <p>
                 You can search for any grocery stores by their names, city, province or even postal codes. 

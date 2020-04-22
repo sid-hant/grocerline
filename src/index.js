@@ -5,7 +5,6 @@ import './index.css';
 import App from './App';
 
 
-// Render the application
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -62,18 +62,14 @@ export default function Search() {
                 </div>
             </form>
 
-            {/* Container for results of the search */}
             <div className="container">
 
-                {/* Loading message/error message */}
-                {/* If the loading message is blank dont show anything otherwise show the message */}
                 {
                     loadingMessage !== ''
                     ? <h5>{loadingMessage}</h5>
                     : ''
                 }
                 
-                {/* StoreList component */}
                 <StoreList key={"store-list"} stores={result}/>
 
             </div>

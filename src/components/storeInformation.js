@@ -49,22 +49,18 @@ export default function StoreInformation(placeId) {
     // Render JSX
     return (
         <>
-        {/* Name of the store */}
         <h2><b>{storeInfo.name ? storeInfo.name : ''}</b></h2>
 
         <SubmitCrowd placeId={id}/>
 
         <hr/>
 
-        {/* Address, current hours and phone number */}
         <p><b>Address: </b>{ storeInfo.formatted_address ? storeInfo.formatted_address : '' }</p>
         <p><b>Hours: </b><br/>{ storeInfo.opening_hours ? storeInfo.opening_hours.weekday_text.map((item, index) => <span key={index}>{item}<br/></span>)  : ''}</p>
         <p><b>Phone: </b>{ storeInfo.formatted_phone_number ? storeInfo.formatted_phone_number : '' }</p>
 
-        {/* Senior Hours */}
         <p><b>Dedicated Senior Hours?: { storeInfo.seniorHours ?  storeInfo.seniorHours.exists ? <span style={{color:'green'}}>Yes</span> : <span style={{color:'red'}}>No</span>  : '' }</b></p>
 
-        {/* Render the senior hours if there is any */}
         {   
             storeInfo.seniorHours
             ? storeInfo.seniorHours.exists
@@ -98,11 +94,9 @@ export default function StoreInformation(placeId) {
 
         <hr/>
 
-        {/* Website and Google Maps URL */}
         <p><a href={storeInfo.website ? storeInfo.website : ''} target="_blank" className="btn btn-outline-secondary">Website</a></p>
         <p><a href={storeInfo.url} target="_blank" className="btn btn-outline-secondary">Open Google Maps</a></p>
 
-        {/* Submit senior hours */}
         <SeniorForm placeId={id}/>
 
 
