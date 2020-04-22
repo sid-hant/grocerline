@@ -1,38 +1,41 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+// Importing dependencies
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Faq from "./components/faq.component";
-import Search from "./components/search.component";
+// Importing components
+import Faq from "./components/faq";
+import Search from "./components/search";
 
+// importing css
 import './App.css';
 
-export default class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <div class="alert alert-dark" role="alert">
-          🚨 Don't forget to submit the crowd level for the store you are visting. Also, please donate if you can <a target="_blank" href="https://www.buymeacoffee.com/NUxSuRm">here</a> to help keep this website up. 🚨
-          </div>
-          <div className="container">
-            <Link style={{color: 'black'}} to="/" className="nav-link"><h1 style={{ fontSize: '9vw', paddingTop: '5%', paddingBottom: '5%'}}>grocerline</h1></Link>
-          </div>
-          
-          
-          <Search/>
-          
-          <Faq/>
+// App 
+export default function App() {
+  
+  // Returning CSS
+  return (
+      
+    // Main container
+    <div className="App">
 
-          <Route/>
-          <Route/>
+      {/* Alert for users to submit crowd level and donate */}
+      <div className="alert alert-dark" role="alert">
+        <span aria-label="Alert emoji" role="img">🚨</span> Don't forget to submit the crowd level for the store you are visting. Also, please donate if you can <a target="_blank" href="https://www.buymeacoffee.com/NUxSuRm">here</a> to help keep this website up. <span aria-label="Alert emoji" role="img">🚨</span>
+      </div>
+      
+      {/* Main title on the page. Says "grocerline" */}
+      <div className="container">
+        <h1 style={{ fontSize: '9vw', paddingTop: '5%', paddingBottom: '5%'}}>grocerline</h1>
+      </div>
+      
+      {/* Search component */}
+      <Search/>
 
-          
-    
-        </div>
-      </Router>
-    )
-  }
+      {/* FAQ component */}
+      <Faq/>
+
+    </div>
+  )
 }
+
 

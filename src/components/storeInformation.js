@@ -1,0 +1,113 @@
+// import dependencies
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+import CurrentCrowd from './currentCrowd';
+import HistoricCrowd from './historicCrowd';
+import SubmitCrowd from './submitCrowd';
+import SeniorForm from './seniorForm';
+
+
+export default function StoreInformation(placeId) {
+    // set state
+    const [id, setId] = useState(placeId.placeId);
+    const [storeInfo, setStoreInfo] = useState({});
+    const [historicDay, setHistoricDay] = useState(0);
+
+
+    // Utitlities functions
+    // format military time to 
+    const getFormattedTime = function (fourDigitTime){
+        var hours24 = parseInt(fourDigitTime.substring(0,2));
+        var hours = ((hours24 + 11) % 12) + 1;
+        var amPm = hours24 > 11 ? ' PM' : ' AM';
+        var minutes = fourDigitTime.substring(2);
+        return hours + ':' + minutes + amPm;
+    };
+
+    // USE EFFECTS
+    // useEffect when the component load, set the placeId
+    useEffect(() => {
+        // Set id to the current place id
+        setId(placeId.placeId);
+    })
+
+    // loads when the placeId changes
+    useEffect(() => {        
+        // if id is not empty
+        if (id !== null ){
+            // Make get request to get the 
+            axios.get(`https://covid-grocery-api.herokuapp.com/api/v1/store/${id}`)
+            .then(response => {
+                const data = response.data;
+                if (data.code === 200){
+                    setStoreInfo(data.store);
+                };
+            });
+        }
+    }, [id]);
+
+    // Render JSX
+    return (
+        <>
+        {/* Name of the store */}
+        <h2><b>{storeInfo.name ? storeInfo.name : ''}</b></h2>
+
+        <SubmitCrowd placeId={id}/>
+
+        <hr/>
+
+        {/* Address, current hours and phone number */}
+        <p><b>Address: </b>{ storeInfo.formatted_address ? storeInfo.formatted_address : '' }</p>
+        <p><b>Hours: </b><br/>{ storeInfo.opening_hours ? storeInfo.opening_hours.weekday_text.map((item, index) => <span key={index}>{item}<br/></span>)  : ''}</p>
+        <p><b>Phone: </b>{ storeInfo.formatted_phone_number ? storeInfo.formatted_phone_number : '' }</p>
+
+        {/* Senior Hours */}
+        <p><b>Dedicated Senior Hours?: { storeInfo.seniorHours ?  storeInfo.seniorHours.exists ? <span style={{color:'green'}}>Yes</span> : <span style={{color:'red'}}>No</span>  : '' }</b></p>
+
+        {/* Render the senior hours if there is any */}
+        {   
+            storeInfo.seniorHours
+            ? storeInfo.seniorHours.exists
+                ? 
+                    <p>
+                        {Object.keys(storeInfo.seniorHours.hours).map((item, index) => <span key={index}>{item.charAt(0).toUpperCase()+item.slice(1)}: {getFormattedTime(storeInfo.seniorHours.hours[item]['open'])} - {getFormattedTime(storeInfo.seniorHours.hours[item]['close'])}<br/></span>)}
+                    </p>
+                : '' 
+            : ''
+        }
+
+        <hr/>
+
+        <p><b>Current Crowd Level: </b></p>
+            <CurrentCrowd placeId={id}/>
+
+        <hr/>
+
+        <p><b>Historic Crowd Level: </b></p>
+        <select onChange={(e) => setHistoricDay(e.target.value)} className="form-control">
+            <option value="0">Sunday</option>
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+        </select>
+        <br/>
+        <HistoricCrowd placeId={id} day={historicDay}/>
+
+        <hr/>
+
+        {/* Website and Google Maps URL */}
+        <p><a href={storeInfo.website ? storeInfo.website : ''} target="_blank" className="btn btn-outline-secondary">Website</a></p>
+        <p><a href={storeInfo.url} target="_blank" className="btn btn-outline-secondary">Open Google Maps</a></p>
+
+        {/* Submit senior hours */}
+        <SeniorForm placeId={id}/>
+
+
+        </>
+    )
+}
+
+
