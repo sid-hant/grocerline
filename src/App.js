@@ -1,21 +1,15 @@
-// Importing dependencies
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// Importing components
 import Faq from "./components/faq";
 import Search from "./components/search";
 
-// importing css
 import './App.css';
 
-// App 
 export default function App() {
   
-  // Returning CSS
   return (
       
-    // Main container
     <div className="App">
 
       {/* Alert for users to submit crowd level and donate */}
